@@ -1,7 +1,7 @@
-import img1 from "../../../public/TrendingPost/img-1.jpeg"
-import img2 from "../../../public/TrendingPost/img-2.webp"
-import img3 from "../../../public/TrendingPost/img-3.jpeg"
-import img4 from "../../../public/TrendingPost/img-4.jpeg"
+import img1 from "../../assets/home/TrendingPost/img-1.jpeg"
+import img2 from "../../assets/home/TrendingPost/img-2.webp"
+import img3 from "../../assets/home/TrendingPost/img-3.jpeg"
+import img4 from "../../assets/home/TrendingPost/img-4.jpeg"
 
 export const trendingPostData = [
   {
@@ -13,7 +13,7 @@ export const trendingPostData = [
   {
     id: 2,
     title: "Create Amazing Racipies For Outside Family Trips.",
-    tag: [],
+    tag: ["Car"],
     img: img4
   },
   {

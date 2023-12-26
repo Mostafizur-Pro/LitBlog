@@ -7,7 +7,7 @@ import classes from "./herosection.module.css"
 const HeroSection = () => {
     return (
       <div>
-        <p className="text-4xl">Hero Section Here</p>
+        {/* <p className="text-4xl">Hero Section Here</p> */}
         <section className="grid gap-4 md:grid-cols-12 ">
           {/* first div start */}
           <div className="relative bg-black bg-opacity-60 lg:col-span-6 md:w-full sm:w-[75%] mx-auto md:col-span-5 sm:col-span-6 ">
