@@ -1,10 +1,10 @@
 import Image from "next/image";
-
 import React from "react";
 import Image1 from "../../assets/home/HeroSection/img-1.jpeg";
-import CategoryPage from "./Category";
 import Advertisement from "../Advertisement/Advertisement";
 import LatestPost from "./LatestPost";
+import SideCategory from "../SideMenu/Category";
+import SideLatestPost from "../SideMenu/LatestPost";
 
 const WeeklyPost = () => {
   return (
@@ -95,101 +95,20 @@ const WeeklyPost = () => {
                 </div>
               </div>
             </div>
-            {/* add section */}
-            {/* <div className="bg-slate-300 h-32 m-12 p-8 rounded-lg text-center text-white">
-              <p>Advertisement</p>
-              <h4 className="font-bold text-2xl ">You can place add </h4>
-              <p>750*1200</p>
-            </div> */}
-            <Advertisement/>
-            {/* another latest */}
-            <LatestPost/>
-            {/* another add */}
-            {/* <div className="bg-slate-300 h-32 m-12 p-8 rounded-lg text-center text-white">
-              <p>Advertisement</p>
-              <h4 className="font-bold text-2xl ">You can place add </h4>
-              <p>750*1200</p>
-            </div> */}
-            {/* <Advertisement/> */}
+
+            <Advertisement />
+
+            <LatestPost />
           </div>
 
-          {/* latest post */}
           <div className="col-span-1">
-            <h2 className="font-bold text-4xl m-4">latest Post</h2>
+            <SideLatestPost />
 
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
-            </div>
+            <SideCategory />
 
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
+            <div className="mt-10">
+              <Advertisement />
             </div>
-
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
-            </div>
-
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
-            </div>
-
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
-            </div>
-
-            <div className="flex justify-between items-center m-2 ">
-              <div>
-                <Image className="w-48 rounded-md " src={Image1} alt="" />
-              </div>
-              <div className="flex flex-col ps-2 ">
-                <h4 className="font-bold text-2xl ">
-                  Editor Pick thisis the title
-                </h4>
-                <h1>Dec 27, 2023</h1>
-              </div>
-            </div>
-            {/* category */}
-           <CategoryPage/>
           </div>
         </div>
       </div>
