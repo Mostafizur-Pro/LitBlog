@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import img1 from "../../assets/about/1694499760578.png";
+import mostafizurImg from "../../assets/about/mostafizur rahman img.jpg";
+import fahadImg from "../../assets/about/Fahad_img.jpg";
+import emon from "../../assets/about/emon.jpg";
 import classes from "./index.module.css";
 import Services from "./Services";
 
 const AboutPage = () => {
   return (
     <div>
-      <section className="max-w-7xl mx-auto ">
+    <section className="max-w-7xl mx-auto ">
         <div className="md:grid md:grid-cols-3">
           {/* main div */}
           <div className="md:col-span-2 mt-20 px-4">
@@ -79,8 +82,7 @@ const AboutPage = () => {
           </div>
           {/* service part */}
           <div className="md:col-span-1">
-            {/* <Services></Services> */}
-            <Services />
+            <Services></Services>
           </div>
         </div>
         {/* ceo sections */}
@@ -93,10 +95,10 @@ const AboutPage = () => {
             Creative mind with years of executive experience in marketing,
             technology, and media.
           </p>
-          <Link href={"/"}>
+          <Link href={"/about/mostafizur-rahman"}>
             <Image
-              src={img1}
-              alt="ceo img"
+              src={mostafizurImg}
+              alt="ceo mostafizur img"
               className={`w-[253px] mx-auto h-[253px] rounded-xl border-4 border-white shadow-xl shadow-black ${classes.custom_shadow}`}
             ></Image>
           </Link>
@@ -124,54 +126,51 @@ const AboutPage = () => {
             <div>
               <Link href={"/"}>
                 <Image
-                  src={img1}
-                  alt="ceo img"
+                  src={fahadImg}
+                  alt="Fahad"
                   className={`w-[253px] mx-auto h-[253px] rounded-xl border-4 border-white shadow-xl shadow-black ${classes.custom_shadow}`}
                 ></Image>
               </Link>
               <Link href={"/"}>
                 <h1 className="text-center mt-20 text-gray-700 text-2xl font-bold">
-                  Mostafizur Rahman
+                  Fahad
                 </h1>
                 <p className="text-sm opacity-90 text-center">
-                  Founder & CEO Of DeginieIt and Web Developer with 4 in
-                  Bangladesh since 2018
+                  Front-end Developer
                 </p>
               </Link>
             </div>
             <div>
-              <Link href={"/"}>
+              <Link href={"/about/abu-jayed"}>
                 <Image
                   src={img1}
-                  alt="ceo img"
+                  alt="Abu Jayed"
                   className={`w-[253px] mx-auto h-[253px] rounded-xl border-4 border-white shadow-xl shadow-black ${classes.custom_shadow}`}
                 ></Image>
               </Link>
-              <Link href={"/"}>
+              <Link href={"/about/abu-jayed"}>
                 <h1 className="text-center mt-20 text-gray-700 text-2xl font-bold">
-                  Mostafizur Rahman
+                  Abu Jayed
                 </h1>
                 <p className="text-sm opacity-90 text-center">
-                  Founder & CEO Of DeginieIt and Web Developer with 4 in
-                  Bangladesh since 2018
+                  Front-end Developer
                 </p>
               </Link>
             </div>
             <div>
-              <Link href={"/"}>
+              <Link href={"/about/Ashikur-Rahman"}>
                 <Image
-                  src={img1}
-                  alt="ceo img"
+                  src={emon}
+                  alt="emon"
                   className={`w-[253px] mx-auto h-[253px] rounded-xl border-4 border-white shadow-xl shadow-black ${classes.custom_shadow}`}
                 ></Image>
               </Link>
-              <Link href={"/"}>
+              <Link href={"/about/Ashikur-Rahman"}>
                 <h1 className="text-center mt-20 text-gray-700 text-2xl font-bold">
-                  Mostafizur Rahman
+                Ashikur-Rahman
                 </h1>
                 <p className="text-sm opacity-90 text-center">
-                  Founder & CEO Of DeginieIt and Web Developer with 4 in
-                  Bangladesh since 2018
+                  Head Of Backend Developer
                 </p>
               </Link>
             </div>
