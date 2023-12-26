@@ -7,7 +7,6 @@ const Contact = () => {
   return (
     <div>
       <Banner />
-
       <section className="md:grid md:grid-cols-3">
         <div className="md:col-span-2">
           <ContactIntro />
