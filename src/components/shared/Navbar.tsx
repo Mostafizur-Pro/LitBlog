@@ -1,31 +1,37 @@
 // components/Navbar.tsx
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
+
 
 const Navbar: React.FC = () => {
+  const pathName = usePathname()
+  if(pathName === "/signUp" || pathName === "/login"){
+    return " "
+  }
   const menuItems = (
     <>
       <li>
+        {" "}
         <Link href="/">Home</Link>
       </li>
       <li>
-        <details>
-          <summary>Page</summary>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
+        {" "}
+        <Link href="/blog">Blog</Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        {" "}
+        <Link href="/allcategory">All Category</Link>
       </li>
+      <li>
+        {" "}
+        <Link href="/technology">Technology</Link>
+      </li>
+
       <li>
         <Link href="/contact">Contact</Link>
+      </li>
+      <li>
+        <Link href="/about">About Us</Link>
       </li>
     </>
   );
@@ -58,14 +64,16 @@ const Navbar: React.FC = () => {
             </ul>
           </div>
           <a href="/" className="btn btn-ghost text-xl">
-            AK Design BD
+            LitBlog
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menuItems}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <Link href={"/login"} className="btn">
+            Login
+          </Link>
         </div>
       </div>
     </nav>
