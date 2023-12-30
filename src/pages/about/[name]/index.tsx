@@ -13,28 +13,29 @@ import fbImg from "../../../assets/Icon/facebook.png";
 import gitImg from "../../../assets/Icon/github.png";
 import linkedInImg from "../../../assets/Icon/linkedin.png";
 
-
 import abu_jayedImg from "../../../assets/about/1694499760578.png";
-import emonImg from "../../../assets/about/emon.jpg"
-
+import emonImg from "../../../assets/about/emon.jpg";
+import { employeeData } from "./data";
+import { usePathname } from "next/navigation";
 
 const EmployeeDetails = ({ params }) => {
-    const employeeName = params.name.toLowerCase();
-    const data = employeeData;
-    let abuJayed = data[0];
-    let ashikurRahman = data[1];
-    let singleEmployeeData;
-    let employeeImg = abu_jayedImg
-    if (abuJayed.name.toLowerCase() == employeeName) {
-      singleEmployeeData = abuJayed;
-      employeeImg = abu_jayedImg
-    } else if (ashikurRahman.name.toLowerCase() == employeeName) {
-      singleEmployeeData = ashikurRahman;
-      employeeImg = emonImg
-    }
-  
-    return (
-        <section className="max-w-5xl mx-auto">
+  const router = usePathname();
+  const employeeName = router?.split("/").pop()?.toLowerCase();
+  const data = employeeData;
+  let abuJayed = data[0];
+  let ashikurRahman = data[1];
+  let singleEmployeeData;
+  let employeeImg = abu_jayedImg;
+  if (abuJayed.name.toLowerCase() == employeeName) {
+    singleEmployeeData = abuJayed;
+    employeeImg = abu_jayedImg;
+  } else if (ashikurRahman.name.toLowerCase() == employeeName) {
+    singleEmployeeData = ashikurRahman;
+    employeeImg = emonImg;
+  }
+
+  return (
+    <section className="max-w-5xl mx-auto">
       {/* name intro */}
       <div className="pb-20 bg-[#F2F8FF]">
         <div className="pl-3 pt-5">
@@ -59,7 +60,9 @@ const EmployeeDetails = ({ params }) => {
                 height={210}
                 width={210}
               ></Image>
-              <h1 className="font-bold text-3xl text-white">{singleEmployeeData?.name}</h1>
+              <h1 className="font-bold text-3xl text-white">
+                {singleEmployeeData?.name}
+              </h1>
               <p className="text-white font-semibold pb-5">
                 {singleEmployeeData?.designation}
               </p>
@@ -161,9 +164,7 @@ const EmployeeDetails = ({ params }) => {
               <p className="text-black font-bold text-xl">Profile Info</p>
             </div>
             <hr className="border" />
-            <p className="text-gray-600">
-              {singleEmployeeData?.aboutYou}
-            </p>
+            <p className="text-gray-600">{singleEmployeeData?.aboutYou}</p>
           </div>
           {/* work experience */}
           <div className="mt-8">
@@ -200,7 +201,7 @@ const EmployeeDetails = ({ params }) => {
         </div>
       </section>
     </section>
-    );
+  );
 };
 
 export default EmployeeDetails;

@@ -1,6 +1,11 @@
 export const employeeData = [
   // demo employee data.
   {
+    latestEdu: {
+      year: "2019-2022",
+      title: "SSC",
+      institudeName: "JDM Govt. High School",
+    },
     name: "Abu-Jayed", // this name will show in the url - /about/fahad
     age: "19", // this may use. not sure.
     designation: "Front-end Developer", // like Backend Developer/Head of Marketing etc...
@@ -31,6 +36,11 @@ export const employeeData = [
     githubUrl: "https://github.com/Ashikzzzz",
     portfolioUrl: "https://lucent-marzipan-4d576a.netlify.app/",
     experience: "2",
+    latestEdu: {
+      year: "2018-Present",
+      title: "CSE",
+      institudeName: "North South University",
+    },
     skills: [
       "nodeJS",
       "expressJs",
